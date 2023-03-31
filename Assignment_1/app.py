@@ -59,12 +59,6 @@ st.write(all_rev_texts)
 
 revs_enc = sbert_model.encode(all_rev_texts)
 
-# for review in chosen_revs:
-#     if review.get("Negative_Review") != "No Negative":
-#         st.write(review.get("Negative_Review"))
-#     if review.get("Positive_Review") != "No Positive":
-#         st.write(review.get("Positive_Review"))
-        
 cos_sim = util.cos_sim(subject_enc, revs_enc)[0]
 
 largest_idxs = find_n_largest(cos_sim, 10)# put it as a variable
