@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  streamlit_app:
+    restart: always
+    build: ./app
+    ports:
+      - "8501:8501"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5002
+    depends_on:
+      - mlflow
+    command: streamlit run main.py
+
+  mlflow:
+    image: python:3.8-slim-buster
+    command: sh -c "pip install mlflow && mlflow ui --port 5000"
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./mlflow:/mlflow
+      - ./mlflow-artifacts:/mlflow/mlflow-artifacts
