@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/yasminesarraj/Documents/GitHub/MLOPS-assignments/Assignment_3/mlruns/351038092617556075/878c0c5eb7cd4bdb817e7d002c7dc369/artifacts
+end_time: 1683037908664
+entry_point_name: ''
+experiment_id: '351038092617556075'
+lifecycle_stage: active
+run_id: 878c0c5eb7cd4bdb817e7d002c7dc369
+run_name: run with artifact
+run_uuid: 878c0c5eb7cd4bdb817e7d002c7dc369
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683037904365
+status: 3
+tags: []
+user_id: yasminesarraj

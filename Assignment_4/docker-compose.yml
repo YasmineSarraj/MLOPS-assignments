@@ -5,12 +5,12 @@ services:
     restart: always
     build: ./app
     ports:
-      - "8501:8501"
+      - "8080:8080"
     environment:
       - MLFLOW_TRACKING_URI=http://mlflow:5002
     depends_on:
       - mlflow
-    command: streamlit run main.py
+    command: streamlit run main.py --server.port 8080
 
   mlflow:
     image: python:3.8-slim-buster
